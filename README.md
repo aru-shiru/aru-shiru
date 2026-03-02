@@ -51,8 +51,7 @@ I lead small teams and build complex, multi-platform systems end-to-end — from
 ## GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=aru-shiru&show_icons=true&count_private=true&theme=github_dark&hide_border=true&include_all_commits=true" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aru-shiru&layout=compact&theme=github_dark&hide_border=true&langs_count=8" height="165" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=aru-shiru&theme=github_dark" />
 </p>
 
 ---
