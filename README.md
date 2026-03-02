@@ -12,12 +12,48 @@ Most repositories are private (client work). The projects below represent a sele
 
 I lead small teams and build complex, multi-platform systems end-to-end — from database schema and backend architecture to mobile apps and admin dashboards. I've shipped 30+ projects across agriculture, facility management, government, political consulting, and civic tech in Indonesia.
 
-**Mobile** — Flutter, React Native / Expo  
-**Frontend** — React, Next.js, Vue, Nuxt, TanStack Router/Query  
-**Backend** — NestJS, Laravel, Firebase Cloud Functions, Supabase Edge Functions  
-**Databases** — PostgreSQL (Drizzle ORM, Supabase), Firestore, SQLite  
-**Infra & Tooling** — Nx, Turborepo, Meilisearch, Valkey, S3/GCS/MinIO, Fly.io, Docker  
-**Auth & Access** — CASL, SuperTokens, Firebase Auth, Laravel Fortify  
+**Mobile**
+
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-000020?style=flat&logo=expo&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white)
+
+**Frontend**
+
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat&logo=vuedotjs&logoColor=white)
+![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?style=flat&logo=nuxtdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=flat&logo=reactquery&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+
+**Backend**
+
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat&logo=nestjs&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
+
+**Databases & Infra**
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
+![Valkey](https://img.shields.io/badge/Valkey-FF4438?style=flat&logo=redis&logoColor=white)
+
+---
+
+## GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=aru-shiru&show_icons=true&count_private=true&theme=github_dark&hide_border=true&include_all_commits=true" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aru-shiru&layout=compact&theme=github_dark&hide_border=true&langs_count=8" height="165" />
+</p>
 
 ---
 
@@ -117,7 +153,7 @@ I lead small teams and build complex, multi-platform systems end-to-end — from
 
 ---
 
-### ナラティブフォン — Healthcare Video Calling App
+### Narrative Phone — Healthcare Video Calling App
 > Native iOS and Android video calling app for healthcare professionals and patients — enabling phone-style video calls integrated with the [ナラティブブック](https://www.narrativebook.jp) health communication platform.
 
 - Led a team of two native developers (Kotlin + Swift); responsible for code reviews on both platforms and hands-on contribution on the iOS app
