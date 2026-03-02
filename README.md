@@ -99,7 +99,7 @@ I lead small teams and build complex, multi-platform systems end-to-end — from
 - Passwordless authentication via magic link flow (Laravel Fortify) — no traditional password storage
 - AI-powered KTP (national ID card) OCR and fraud detection using Google Gemini API
 - Role-based multi-tenant architecture supporting 5 distinct user roles with dedicated dashboards and middleware-enforced access control
-- Spec-driven development with comprehensive Pest PHP 4 test coverage (feature + browser tests via Playwright)
+- Spec-driven development with comprehensive Pest test coverage (feature + browser tests via Playwright)
 - 24 Eloquent models with soft-delete policies, change history auditing, and strict relational integrity
 
 `Laravel` `Livewire` `PHP` `Tailwind CSS` `Google Gemini API` `SQLite` `Pest` `Docker`
