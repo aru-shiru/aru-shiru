@@ -1,6 +1,6 @@
 # Muhammad Dzul Arsyil
 
-**Senior Full-Stack Engineer** — 9+ years building and leading production software across mobile, web, backend, and infrastructure.
+**Senior Mobile & Full-Stack Engineer** — 9+ years building and leading production software across mobile, web, backend, and infrastructure.
 
 Based in Indonesia. Associate degree in Information Processing, Seifu Institute of Technology, Osaka.
 
@@ -10,7 +10,7 @@ Most repositories are private (client work). The projects below represent a sele
 
 ## What I Do
 
-I lead small teams and build complex, multi-platform systems end-to-end — from database schema and backend architecture to mobile apps and admin dashboards. I've shipped 30+ projects across agriculture, facility management, government, political consulting, and civic tech in Indonesia.
+Senior engineer and technical lead with 9+ years shipping production systems at scale — 1.6M users, 300K volunteers across 18 concurrent organizations, systems replacing apps with 1.5M installs. I architect and deliver complex, multi-platform products end-to-end: from Flutter and React Native mobile apps to NestJS and Laravel backends, PostgreSQL schemas, and cloud infrastructure. I've been building Flutter apps since 2019 (pre-null-safety through Riverpod and offline-first architectures), and equally comfortable across the full web and backend stack. I lead small focused teams, set architecture standards, and still write the hard code myself. 30+ projects shipped across government, political tech, healthcare, agriculture, and enterprise domains in Indonesia and Japan.
 
 **Mobile**
 
@@ -59,6 +59,27 @@ I lead small teams and build complex, multi-platform systems end-to-end — from
 
 ---
 
+## Experience
+
+**Technical Lead & Senior Full-Stack Engineer** — PT Lamacca Kreatif Solusi *(2018 – Present)*  
+Software consultancy delivering custom digital products for Indonesian enterprises and government clients. Led engineering across 30+ projects — setting architecture standards, conducting code reviews, and contributing hands-on across mobile, web, backend, and infrastructure.
+
+**Co-Founder & Full-Stack Engineer** — Belliki *(2016 – 2018)*  
+Online marketplace for custom-designed apparel — customers design clothing using an interactive canvas tool (Fabric.js) or upload design files directly (CorelDraw, Photoshop), then choose their preferred printing vendor. Built the entire platform from scratch including the garment designer, marketplace, and vendor-side order and inventory management system.  
+`Vue.js` `Node.js` `Fabric.js`
+
+---
+
+## Education
+
+**Associate Degree in Information Processing**  
+Seifu Institute of Technology, Osaka  
+*Graduation project sCalendar (voice-recognition scheduler, UWP) recognised as one of two outstanding projects by Microsoft Japan representative.*
+
+**Osaka Japanese Language Education Center** *(2013 – 2014)*
+
+---
+
 ## Selected Projects
 
 ### e-Partai — Political Party Management System
@@ -74,6 +95,19 @@ I lead small teams and build complex, multi-platform systems end-to-end — from
 - Migrated two legacy Firebase systems (simPAN + pantau-relawan) into this unified platform
 
 `TypeScript` `NestJS` `PostgreSQL` `Drizzle ORM` `React` `TanStack Router` `Expo` `React Native` `Meilisearch` `Valkey` `SuperTokens` `CASL` `Nx`
+
+---
+
+### Narrative Phone — Healthcare Video Calling App
+> Native iOS and Android video calling app for healthcare professionals and patients — enabling phone-style video calls integrated with the [ナラティブブック](https://www.narrativebook.jp) health communication platform.
+
+- Led a team of two native developers (Kotlin + Swift); responsible for code reviews on both platforms and hands-on contribution on the iOS app
+- Custom Zoom Video SDK meeting UI built with UIKit on iOS — replacing the default Zoom UI with a tailored in-call experience for healthcare use cases
+- SwiftUI-based iOS app with UIKit integration for Zoom video components; Kotlin/XML-based Android app with equivalent feature set
+- Contact management with QR code exchange, call history, and integration with ナラティブブック's existing account and contact system
+- REST API integration with client-provided Ruby on Rails backend
+
+`SwiftUI` `UIKit` `Kotlin` `XML` `Zoom Video SDK` `Ruby on Rails`
 
 ---
 
@@ -99,27 +133,19 @@ I lead small teams and build complex, multi-platform systems end-to-end — from
 - Custom auth issuing Firebase custom tokens with role-based claims — enabling field volunteers to log in without email accounts
 - Real-time stats aggregation via Firestore triggers: every submission auto-updates per-user, per-region, and per-date counters with daily reset via Cloud Scheduler
 
-`Nuxt` `Vue` `TypeScript` `Firebase` `Mapbox GL` `Google Maps API` `Puppeteer` `Sharp` `Turborepo`
+
+**Flutter mobile app (field worker companion):**
+- **Offline-first draft queue**: SQLite (`sqflite`) persists pending submissions with compressed image preview blobs; a reactive `QueueService` watches connectivity × auth × tenant providers and auto-resumes uploads to Firebase Storage + Firestore on reconnect — survives app restarts and process death
+- Riverpod feature-sliced architecture across login, home, dropping, persuasi, and draft domains — one notifier per concern, cross-provider reactivity, with custom-token auth via Cloud Functions letting field workers log in with username/password (no email required)
+- Multi-tenant single APK: same binary serves multiple client organizations; feature modules and dynamic questionnaires loaded per-tenant from Firestore, with dual-resolution image pipeline streamed through a `FormStatus` state machine
+
+`Nuxt` `Vue` `TypeScript` `Firebase` `Mapbox GL` `Google Maps API` `Puppeteer` `Sharp` `Turborepo` `Flutter` `Dart` `Riverpod` `SQLite` `sqflite` `Geolocator`
 
 ---
-
-### Advansia — Agricultural Sales Force Automation
-> Sales force automation platform for an Indonesian agribusiness company — managing field sales operations, supply chain tracking, and farmer engagement.
-
-- **50K+** sales records · **~100K** tracked field activities · 100+ internal users
-- Led a team across the full stack: architecture decisions, code reviews, and hands-on contribution across mobile, admin dashboard, backend, and infrastructure
-- Offline-first React Native mobile app (Expo) with GPS-stamped field logging, fake location detection, and background sync queues for low-connectivity rural areas
-- 17 independent Firebase Cloud Functions microservices: transactions, inventory, employee management, reporting, and data exports
-- Supply chain management with distributor/retailer stock tracking and automated inventory deductions linked to sales transactions
-
-`React Native` `Expo` `Next.js` `TypeScript` `Firebase` `Google Maps API` `TanStack Query` `CASL` `Turborepo`
-
----
-
 ### SDS — Building Services Management Platform
 > Full-stack facility management platform digitizing attendance, cleaning operations, recruitment, inventory, and ticketing across mobile and web.
 
-- **1,000+** field employees using the app daily
+- **2,000+** field employees using the app daily
 - Led a team across mobile, web admin, backend, database design, and IoT device integration
 - Cross-platform mobile app (React Native/Expo) with GPS-geofenced attendance check-in, camera capture, shift management, cleaning task tracking, and inventory transfers
 - Supabase (PostgreSQL) with 80+ migrations, Row-Level Security policies, custom JWT hooks, and Edge Functions (Deno)
@@ -155,29 +181,15 @@ I lead small teams and build complex, multi-platform systems end-to-end — from
 
 ---
 
-### Narrative Phone — Healthcare Video Calling App
-> Native iOS and Android video calling app for healthcare professionals and patients — enabling phone-style video calls integrated with the [ナラティブブック](https://www.narrativebook.jp) health communication platform.
+### Advansia — Agricultural Sales Force Automation
+> Sales force automation platform for an Indonesian agribusiness company — managing field sales operations, supply chain tracking, and farmer engagement.
 
-- Led a team of two native developers (Kotlin + Swift); responsible for code reviews on both platforms and hands-on contribution on the iOS app
-- Custom Zoom Video SDK meeting UI built with UIKit on iOS — replacing the default Zoom UI with a tailored in-call experience for healthcare use cases
-- SwiftUI-based iOS app with UIKit integration for Zoom video components; Kotlin/XML-based Android app with equivalent feature set
-- Contact management with QR code exchange, call history, and integration with ナラティブブック's existing account and contact system
-- REST API integration with client-provided Ruby on Rails backend
+- **50K+** sales records · **~100K** tracked field activities · 100+ internal users
+- Led a team across the full stack: architecture decisions, code reviews, and hands-on contribution across mobile, admin dashboard, backend, and infrastructure
+- Offline-first React Native mobile app (Expo) with GPS-stamped field logging, fake location detection, and background sync queues for low-connectivity rural areas
+- 17 independent Firebase Cloud Functions microservices: transactions, inventory, employee management, reporting, and data exports
+- Supply chain management with distributor/retailer stock tracking and automated inventory deductions linked to sales transactions
 
-`SwiftUI` `UIKit` `Kotlin` `XML` `Zoom Video SDK` `Ruby on Rails`
-
----
-
-## Experience
-
-**Technical Lead & Senior Full-Stack Engineer** — PT Lamacca Kreatif Solusi *(2018 – Present)*  
-Led a team of developers across 30+ client projects over 9+ years. Responsible for architecture decisions, technical standards, code reviews, and hands-on contribution across mobile, web, backend, database, and infrastructure.
-
----
-
-## Education
-
-**Associate Degree in Information Processing**  
-Seifu Institute of Technology, Osaka
+`React Native` `Expo` `Next.js` `TypeScript` `Firebase` `Google Maps API` `TanStack Query` `CASL` `Turborepo`
 
 ---
