@@ -10,7 +10,7 @@ Most repositories are private (client work). The projects below represent a sele
 
 ## What I Do
 
-Senior engineer and technical lead with 9+ years shipping production systems at scale — 1.6M users, 300K volunteers across 18 concurrent organizations, systems replacing apps with 1.5M installs. I architect and deliver complex, multi-platform products end-to-end: from Flutter and React Native mobile apps to NestJS and Laravel backends, PostgreSQL schemas, and cloud infrastructure. I've been building Flutter apps since 2019 (pre-null-safety through Riverpod and offline-first architectures), and equally comfortable across the full web and backend stack. I lead small focused teams, set architecture standards, and still write the hard code myself. 30+ projects shipped across government, political tech, healthcare, agriculture, and enterprise domains in Indonesia and Japan.
+Senior engineer and technical lead with 9+ years shipping production systems at scale — 1.4M members, volunteer platforms for 20+ campaigns, systems replacing apps with 1.5M installs. I architect and deliver complex, multi-platform products end-to-end: from Flutter and React Native mobile apps to NestJS and Laravel backends, PostgreSQL schemas, and cloud infrastructure. I've been building Flutter apps since 2019 (pre-null-safety through Riverpod and offline-first architectures), and equally comfortable across the full web and backend stack. I lead small focused teams, set architecture standards, and still write the hard code myself. 30+ projects shipped across government, political tech, healthcare, agriculture, and enterprise domains in Indonesia and Japan.
 
 **Mobile**
 
@@ -83,15 +83,15 @@ Seifu Institute of Technology, Osaka
 ## Selected Projects
 
 ### e-Partai — Political Party Management System
-> Full-stack platform managing the complete Indonesian election lifecycle — member registration, candidate management, volunteer coordination, polling station observer placement, and real-time vote tabulation.
+> Full-stack platform for party membership, candidate management, and volunteer coordination — member registration, digital membership cards, and field volunteer trees.
 
-- **1.6M** registered members and volunteers · **50K+** Play Store installs · **~1–2K** daily active users
-- Nx monorepo with 15 domain API modules and 8 apps (API, admin dashboard, mobile PWA, native mobile, CLI, migration tools, E2E suites)
+- **1.4M** members in production · **50K+** Play Store installs
+- Nx monorepo with 17 domain API modules and 8 apps (API, admin dashboard, mobile PWA, native mobile, CLI, migration tools, E2E suites)
 - Functional error handling via `neverthrow` (Result types, zero try-catch) with concern-split repositories (Query / Mutation / List / Creator)
 - CASL authorization + SuperTokens auth + Zod validation + event-driven audit logging via NestJS EventEmitter
 - AI-powered analytics chatbot using Google Gemini with function-calling for natural-language queries on candidate and volunteer data
-- Dual Meilisearch instances for full-text search across user and voter registry (DPT) data
-- Queue-based async exports with PostgreSQL-backed job queue, XLSX generation, and distributed locking via Valkey
+- Full-text search across members and volunteers, with voter registry lookup via a separate search API
+- Queue-based async exports with XLSX generation and distributed locking via Valkey
 - Migrated two legacy Firebase systems (simPAN + pantau-relawan) into this unified platform
 
 `TypeScript` `NestJS` `PostgreSQL` `Drizzle ORM` `React` `TanStack Router` `Expo` `React Native` `Meilisearch` `Valkey` `SuperTokens` `CASL` `Nx`
@@ -101,10 +101,10 @@ Seifu Institute of Technology, Osaka
 ### Narrative Phone — Healthcare Video Calling App
 > Native iOS and Android video calling app for healthcare professionals and patients — enabling phone-style video calls integrated with the [ナラティブブック](https://www.narrativebook.jp) health communication platform.
 
-- Led a team of two native developers (Kotlin + Swift); responsible for code reviews on both platforms and hands-on contribution on the iOS app
+- Led a team of two native developers (Kotlin + Swift); hands-on on both platforms, then owned both apps after they left
 - Custom Zoom Video SDK meeting UI built with UIKit on iOS — replacing the default Zoom UI with a tailored in-call experience for healthcare use cases
-- SwiftUI-based iOS app with UIKit integration for Zoom video components; Kotlin/XML-based Android app with equivalent feature set
-- Contact management with QR code exchange, call history, and integration with ナラティブブック's existing account and contact system
+- SwiftUI-based iOS app with UIKit integration for Zoom video components; Kotlin Android app with the equivalent feature set
+- Contact management, call history, and integration with ナラティブブック's existing account and contact system
 - REST API integration with client-provided Ruby on Rails backend
 
 `SwiftUI` `UIKit` `Kotlin` `XML` `Zoom Video SDK` `Ruby on Rails`
@@ -112,13 +112,12 @@ Seifu Institute of Technology, Osaka
 ---
 
 ### Pantau Relawan — Electoral Volunteer Management & Real-Time Vote Monitoring
-> SaaS platform for political campaign volunteer management and real-time election monitoring, serving 18+ candidate organizations simultaneously with per-candidate isolated deployments.
+> SaaS platform for political campaign volunteer management and real-time election monitoring, serving 20+ candidate organizations with dedicated apps and a shared basic plan.
 
-- **~300K** registered volunteers · **40** concurrent client organizations across dedicated apps and PWAs
 - Nx monorepo (29 apps, 7 shared libraries) spanning Flutter mobile, React PWA, Vue.js admin dashboards, and Firebase Cloud Functions — with shared TypeScript/Dart library layer for cross-platform code reuse
 - Single-handedly built and maintained the Flutter mobile app: Riverpod state management, offline-first architecture (SQLite + Firestore sync), go_router navigation
 - Serverless backend with 25+ domain-driven Cloud Functions modules: auth, real-time vote counting, voter database management, survey analytics, and scheduled batch jobs
-- Multi-candidate architecture with dynamic theming and tenant-scoped data isolation on a single Firestore instance (30+ collections, 8,800+ composite indexes)
+- Multi-candidate architecture with dynamic theming and tenant-scoped data isolation on a single Firestore instance
 
 `Flutter` `Dart` `React` `Vue` `TypeScript` `Firebase` `Riverpod` `Zustand` `Pinia` `Nx` `SQLite`
 
@@ -133,24 +132,24 @@ Seifu Institute of Technology, Osaka
 - Custom auth issuing Firebase custom tokens with role-based claims — enabling field volunteers to log in without email accounts
 - Real-time stats aggregation via Firestore triggers: every submission auto-updates per-user, per-region, and per-date counters with daily reset via Cloud Scheduler
 
-
 **Flutter mobile app (field worker companion):**
 - **Offline-first draft queue**: SQLite (`sqflite`) persists pending submissions with compressed image preview blobs; a reactive `QueueService` watches connectivity × auth × tenant providers and auto-resumes uploads to Firebase Storage + Firestore on reconnect — survives app restarts and process death
 - Riverpod feature-sliced architecture across login, home, dropping, persuasi, and draft domains — one notifier per concern, cross-provider reactivity, with custom-token auth via Cloud Functions letting field workers log in with username/password (no email required)
 - Multi-tenant single APK: same binary serves multiple client organizations; feature modules and dynamic questionnaires loaded per-tenant from Firestore, with dual-resolution image pipeline streamed through a `FormStatus` state machine
 
-`Nuxt` `Vue` `TypeScript` `Firebase` `Mapbox GL` `Google Maps API` `Puppeteer` `Sharp` `Turborepo` `Flutter` `Dart` `Riverpod` `SQLite` `sqflite` `Geolocator`
+`Nuxt` `Vue` `TypeScript` `Firebase` `Google Maps API` `Puppeteer` `Sharp` `Nx` `Flutter` `Dart` `Riverpod` `SQLite` `sqflite` `Geolocator`
 
 ---
+
 ### SDS — Building Services Management Platform
 > Full-stack facility management platform digitizing attendance, cleaning operations, recruitment, inventory, and ticketing across mobile and web.
 
 - **2,000+** field employees using the app daily
-- Led a team across mobile, web admin, backend, database design, and IoT device integration
+- Sole engineer across mobile, web admin, backend, database design, and IoT device integration
 - Cross-platform mobile app (React Native/Expo) with GPS-geofenced attendance check-in, camera capture, shift management, cleaning task tracking, and inventory transfers
-- Supabase (PostgreSQL) with 80+ migrations, Row-Level Security policies, custom JWT hooks, and Edge Functions (Deno)
+- Supabase (PostgreSQL) with Row-Level Security policies, custom JWT hooks, and Edge Functions (Deno)
 - Integrated physical fingerprint scanners by implementing the iClock protocol — bridging ZKTeco biometric devices to the cloud via Express/SQLite on Fly.io
-- Nuxt Layers architecture for modular feature domains: attendance, employee management, recruitment pipeline, building management, real-time ticketing
+- Nuxt Layers architecture for modular feature domains: attendance, employee management, recruitment pipeline, building management, and ticketing
 
 `React Native` `Expo` `Nuxt` `Vue` `TypeScript` `Supabase` `PostgreSQL` `Firebase Cloud Functions` `CASL` `Zod` `Mapbox` `Fly.io` `Turborepo`
 
@@ -162,34 +161,23 @@ Seifu Institute of Technology, Osaka
 - Replacing a legacy system with **1.5M Play Store installs** and **~200K monthly health checks**
 - Passwordless authentication via magic link flow (Laravel Fortify) — no traditional password storage
 - AI-powered KTP (national ID card) OCR and fraud detection using Google Gemini API
-- Role-based multi-tenant architecture supporting 5 distinct user roles with dedicated dashboards and middleware-enforced access control
+- Role-based access for doctors, health workers, registration agents, police officers, and administrators
 - Spec-driven development with comprehensive Pest test coverage (feature + browser tests via Playwright)
-- 24 Eloquent models with soft-delete policies, change history auditing, and strict relational integrity
+- Change history auditing, soft-delete policies, and strict relational integrity on PostgreSQL
 
-`Laravel` `Livewire` `PHP` `Tailwind CSS` `Google Gemini API` `SQLite` `Pest` `Docker`
-
----
-
-### e-Hibah Polri — Grant Management System, Indonesian National Police
-> Full-stack grant lifecycle platform for the Indonesian National Police managing proposals, agreements, budget planning, fund withdrawals, and document workflows across a three-tier organizational hierarchy.
-
-- Multi-level approval workflows with TOTP 2FA and granular authorization policies per organizational tier
-- Comprehensive audit trail: change history tracking, activity logging, and soft-delete policies aligned to data retention requirements
-- Led full platform rewrite from Laravel 11 + Inertia.js + React to a Livewire-based architecture, eliminating the JS build pipeline for most features while preserving UI interactivity
-
-`Laravel` `Livewire` `PHP` `PostgreSQL` `Tailwind CSS` `Alpine.js` `Laravel Fortify` `Pest` `Docker`
+`Laravel` `Livewire` `PHP` `PostgreSQL` `Tailwind CSS` `Google Gemini API` `Pest` `Docker`
 
 ---
 
-### Advansia — Agricultural Sales Force Automation
-> Sales force automation platform for an Indonesian agribusiness company — managing field sales operations, supply chain tracking, and farmer engagement.
+### ADV Live — Agricultural Sales Force Automation
+> Sales force automation platform for an agribusiness in Indonesia and Malaysia — managing field sales operations, supply chain tracking, and farmer engagement.
 
-- **50K+** sales records · **~100K** tracked field activities · 100+ internal users
+- Indonesia live since 2021: **50K+** sales records · **~100K** tracked field activities · 100+ internal users
+- Adopted by Malaysia HQ on the same product, with local geography, catalog, and language
 - Led a team across the full stack: architecture decisions, code reviews, and hands-on contribution across mobile, admin dashboard, backend, and infrastructure
 - Offline-first React Native mobile app (Expo) with GPS-stamped field logging, fake location detection, and background sync queues for low-connectivity rural areas
-- 17 independent Firebase Cloud Functions microservices: transactions, inventory, employee management, reporting, and data exports
 - Supply chain management with distributor/retailer stock tracking and automated inventory deductions linked to sales transactions
 
-`React Native` `Expo` `Next.js` `TypeScript` `Firebase` `Google Maps API` `TanStack Query` `CASL` `Turborepo`
+`React Native` `Expo` `Nuxt` `TypeScript` `NestJS` `PostgreSQL` `Firebase` `Google Maps API` `TanStack Query` `CASL` `Turborepo`
 
 ---
