@@ -48,17 +48,6 @@ Senior engineer and technical lead with 9+ years shipping production systems at 
 
 ---
 
-## GitHub Stats
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=aru-shiru&theme=github_dark" />
-</p>
-<p align="center">
-  <img src="https://ghchart.rshah.org/aru-shiru" alt="Contribution Graph" />
-</p>
-
----
-
 ## Experience
 
 **Technical Lead & Senior Full-Stack Engineer** — PT Lamacca Kreatif Solusi *(2018 – Present)*  
