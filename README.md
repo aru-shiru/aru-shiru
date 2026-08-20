@@ -1,6 +1,6 @@
 # Muhammad Dzul Arsyil
 
-**Senior Mobile & Full-Stack Engineer** — 9+ years building and leading production software across mobile, web, backend, and infrastructure.
+**Senior Mobile & Full-Stack Engineer** — 10 years building and leading production software across mobile, web, backend, and infrastructure.
 
 Based in Indonesia. Associate degree in Information Processing, Seifu Institute of Technology, Osaka.
 
@@ -10,7 +10,7 @@ Most repositories are private (client work). The projects below represent a sele
 
 ## What I Do
 
-Senior engineer and technical lead with 9+ years shipping production systems at scale — 1.4M members, volunteer platforms for 20+ campaigns, systems replacing apps with 1.5M installs. I architect and deliver complex, multi-platform products end-to-end: from Flutter and React Native mobile apps to NestJS and Laravel backends, PostgreSQL schemas, and cloud infrastructure. I've been building Flutter apps since 2019 (pre-null-safety through Riverpod and offline-first architectures), and equally comfortable across the full web and backend stack. I lead small focused teams, set architecture standards, and still write the hard code myself. 30+ projects shipped across government, political tech, healthcare, agriculture, and enterprise domains in Indonesia and Japan.
+Senior engineer and technical lead with 10 years shipping production systems at scale — 1.4M members, volunteer platforms for 20+ campaigns, systems replacing apps with 1.5M installs. I architect and deliver complex, multi-platform products end-to-end: from Flutter and React Native mobile apps to NestJS and Laravel backends, PostgreSQL schemas, and cloud infrastructure. I've been building Flutter apps since 2019 (pre-null-safety through Riverpod and offline-first architectures), and equally comfortable across the full web and backend stack. I lead small focused teams, set architecture standards, and still write the hard code myself. 30+ projects shipped across government, political tech, healthcare, agriculture, and enterprise domains in Indonesia and Japan.
 
 **Mobile**
 
